@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies (Cubre frontend y cualquier otra subcarpeta)
+node_modules/
+
+# Production build
+dist/
+dist-ssr/
+out/
+
+# Environment variables (Seguridad crítica)
+.env
+.env.production
+.env.local
+.env.*.local
+*.local
+
+# Cache and generated files
+.eslintcache
+tsconfig.tsbuildinfo
+.node_repl_history
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.sw?
+
+# --- Backend (Python/FastAPI) ---
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Base de Datos (Docker) ---
+# Evita subir los datos físicos de la DB si usas volúmenes locales
+postgres_data/
+pgdata/

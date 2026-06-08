@@ -1,0 +1,161 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbCI6IkFETUlOIiwiZXhwIjoxNzc5MTYwMjk0fQ.VB8FMZELP3WKcFM1K7DMbAqrUc0w3hgoZNtRRtLyaH4
+
+### Crear Participante 1
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Ana García",
+  "email": "ana.garcia@ejemplo.com",
+  "edad": 28,
+  "pais": "Argentina",
+  "modalidad": "Virtual",
+  "tecnologias": ["React", "Node"],
+  "nivel": "Intermedio",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 2
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Carlos López",
+  "email": "carlos.lopez@ejemplo.com",
+  "edad": 35,
+  "pais": "Chile",
+  "modalidad": "Presencial",
+  "tecnologias": ["Python", "Java"],
+  "nivel": "Avanzado",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 3
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "María Fernández",
+  "email": "maria.fernandez@ejemplo.com",
+  "edad": 22,
+  "pais": "Uruguay",
+  "modalidad": "Híbrido",
+  "tecnologias": ["Vue", "Angular"],
+  "nivel": "Principiante",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 4
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Juan Pérez",
+  "email": "juan.perez@ejemplo.com",
+  "edad": 40,
+  "pais": "México",
+  "modalidad": "Virtual",
+  "tecnologias": ["React", "Python"],
+  "nivel": "Avanzado",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 5
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Lucía Martínez",
+  "email": "lucia.martinez@ejemplo.com",
+  "edad": 26,
+  "pais": "España",
+  "modalidad": "Presencial",
+  "tecnologias": ["Node"],
+  "nivel": "Intermedio",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 6
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Diego Sánchez",
+  "email": "diego.sanchez@ejemplo.com",
+  "edad": 31,
+  "pais": "Argentina",
+  "modalidad": "Híbrido",
+  "tecnologias": ["Java"],
+  "nivel": "Avanzado",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 7
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Sofía Romero",
+  "email": "sofia.romero@ejemplo.com",
+  "edad": 24,
+  "pais": "Chile",
+  "modalidad": "Virtual",
+  "tecnologias": ["React", "Vue"],
+  "nivel": "Principiante",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 8
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Martín Gómez",
+  "email": "martin.gomez@ejemplo.com",
+  "edad": 29,
+  "pais": "Uruguay",
+  "modalidad": "Presencial",
+  "tecnologias": ["Python", "Angular"],
+  "nivel": "Intermedio",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 9
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Valentina Ruiz",
+  "email": "valentina.ruiz@ejemplo.com",
+  "edad": 33,
+  "pais": "México",
+  "modalidad": "Híbrido",
+  "tecnologias": ["Node", "Java"],
+  "nivel": "Avanzado",
+  "aceptaTerminos": true
+}
+
+### Crear Participante 10
+POST http://localhost:8000/participantes/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nombre": "Pedro Díaz",
+  "email": "pedro.diaz@ejemplo.com",
+  "edad": 27,
+  "pais": "España",
+  "modalidad": "Virtual",
+  "tecnologias": ["React"],
+  "nivel": "Principiante",
+  "aceptaTerminos": true
+}
