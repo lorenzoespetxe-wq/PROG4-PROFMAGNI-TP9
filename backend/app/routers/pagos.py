@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-load_dotenv()
+load_dotenv(override=True)
 
 router = APIRouter(prefix="/pagos", tags=["pagos"])
 
