@@ -35,10 +35,10 @@ app = FastAPI(title="API Registro Eventos TP7")
 # (ej. Vite en 5173 y FastAPI en 8000)
 # Esta lista definirá quien tiene permiso de conectarse.
 origenes_permitidos = [
-    "http://localhost:5173",  # Puerto por defecto de Vite/React
+    "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://cannon-unwelcome-hastily.ngrok-free.dev",  # puerto ngrok
 ]
-
 # Agregamos una capa de procesamiento por la que pasaran las
 # capas de procesamiento antes de llegar a las rutas.
 app.add_middleware(

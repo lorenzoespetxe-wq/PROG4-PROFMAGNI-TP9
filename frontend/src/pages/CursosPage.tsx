@@ -16,7 +16,7 @@ export const CursosPage = () => {
   const handleComprar = async (curso: Curso) => {
     setLoadingId(curso.id);
     try {
-      const response = await fetch("http://127.0.0.1:8000/pagos/crear-preferencia", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/pagos/crear-preferencia`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

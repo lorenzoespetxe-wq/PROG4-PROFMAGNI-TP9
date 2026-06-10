@@ -37,14 +37,12 @@ def crear_preferencia(solicitud: SolicitudPago):
                     "currency_id": "ARS",
                 }
             ],
-            # Aquí configuras las URLs de retorno. Si utilizas ngrok,
-            # reemplaza "http://localhost:5173" por tu URL pública de ngrok.
             "back_url": {
-                "success": "http://localhost:5173/pago-exitoso",
-                "failure": "http://localhost:5173/pago-fallido",
-                "pending": "http://localhost:5173/pago-pendiente",
+                "success": "https://cannon-unwelcome-hastily.ngrok-free.dev/pago-exitoso",
+                "failure": "https://cannon-unwelcome-hastily.ngrok-free.dev/pago-fallido",
+                "pending": "https://cannon-unwelcome-hastily.ngrok-free.dev/pago-pendiente",
             },
-            # "auto_return": "approved", esto lo rompe en pruebas con locahost parece
+            "auto_return": "all",
         }
 
         # Envía la solicitud a la API de Mercado Pago

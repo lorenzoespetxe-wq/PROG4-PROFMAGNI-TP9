@@ -1,4 +1,4 @@
-import { createContext, useReducer, useEffect, useState, type ReactNode } from 'react';
+import { createContext, useEffect, useReducer, useState, type ReactNode } from 'react';
 import type { Participante } from '../models/Participante';
 import { participantesReducer } from '../reducers/participantesReducer';
 import { useAuth } from './AuthContext';
@@ -14,8 +14,8 @@ interface ContextType {
 }
 
 export const ParticipantesContext = createContext<ContextType | undefined>(undefined);
-// Se ajusta a 127.0.0.1 para evitar tiempos de espera de DNS
-const API_URL = 'http://127.0.0.1:8000/participantes';
+
+const API_URL = `${import.meta.env.VITE_API_URL}/participantes`;
 
 export function ParticipantesProvider({ children }: { children: ReactNode }) {
   const [participantes, dispatch] = useReducer(participantesReducer, []);
