@@ -1,22 +1,17 @@
-# Access the Swagger UI:
-# Go to http://127.0.0.1:8000/docs to view and test all your endpoints interactively.
+import os
+from pathlib import Path
 
-# to run, go to backend and run:
-# .\venv\Scripts\activate
-# uvicorn app.main:app --reload
+from dotenv import load_dotenv
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-# main.py es la raíz de la aplicación:
-# - Inicializa la instancia de FastAPI,
-# - incluye las rutas de los diferentes routers
-# - y configura los middlewares, como el control de acceso CORS.
-
-# maneja las reglas de seguridad de acceso entre dominios
 from app.core.database import Base, engine
 from app.models.participante import Participante
 from app.models.usuario import Usuario
 from app.routers import auth, pagos, participantes
-from fastapi import FastAPI  # inicializará y construirá la aplicación web
-from fastapi.middleware.cors import CORSMiddleware
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / ".env", override=True)
 
 # Crea las tablas en PostgreSQL si no existen:
 # Base.metadata contiene el registro de todos los modelos que heredaron de Base
@@ -34,11 +29,13 @@ app = FastAPI(title="API Registro Eventos TP7")
 # puerto / dominio distinto al que sirve a la pagina (back).
 # (ej. Vite en 5173 y FastAPI en 8000)
 # Esta lista definirá quien tiene permiso de conectarse.
+NGROK_URL = os.getenv("NGROK_URL", "")
 origenes_permitidos = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://cannon-unwelcome-hastily.ngrok-free.dev",  # puerto ngrok
 ]
+if NGROK_URL:
+    origenes_permitidos.append(NGROK_URL)
 # Agregamos una capa de procesamiento por la que pasaran las
 # capas de procesamiento antes de llegar a las rutas.
 app.add_middleware(

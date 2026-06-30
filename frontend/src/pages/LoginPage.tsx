@@ -68,6 +68,26 @@ export default function LoginPage() {
             Login
           </button>
         </form>
+
+        <div className="mt-6 border-t pt-4">
+          <p className="text-sm text-gray-500 text-center mb-3">Acceso rápido</p>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => { setUsername("admin"); setPassword("admin123"); }}
+              className="flex-1 bg-red-600 text-white p-2 rounded text-sm hover:bg-red-700"
+            >
+              Admin
+            </button>
+            <button
+              type="button"
+              onClick={() => { setUsername("user"); setPassword("user123"); }}
+              className="flex-1 bg-green-600 text-white p-2 rounded text-sm hover:bg-green-700"
+            >
+              Usuario
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
